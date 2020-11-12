@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const secret = 'ini kode rahasia saya'
+const secret = process.env.JWT_SECRET
 const passport = require('passport')
 const { Strategy } = require('passport-http-bearer')
 

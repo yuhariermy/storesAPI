@@ -4,8 +4,7 @@ const db = require('../controller/dbController')
 const jwt = require('jsonwebtoken')
 const routeErrorHandler = require('../middleware/errorMiddleware')
 const { checkPassword } = require('../helper/bcryptHelper')
-const secret = 'ini kode rahasia saya'
-
+const secret = process.env.JWT_SECRET
 // cara 1 async await using try and catch
 app.post('/login', async (req, res, next) => {
   const username = req.body.username
